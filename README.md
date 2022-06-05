@@ -1,5 +1,7 @@
 # Webscrape of tech stacks from remote companies with job listings
 
+The source are companies listed on https://himalayas.app/companies
+
 Install Python 3
 
 * Run `python scrap.py` to save all the languages and frameworks in data.txt
