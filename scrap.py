@@ -6,7 +6,7 @@ from time import sleep
 URL = 'https://himalayas.app'
 f = open("data.txt", "a")
   
-for page in range(32, 102):
+for page in range(1, 102):
     print("Page: " + str(page))
     print("---------------------")
     allCompaniesReq = requests.get(URL + '/companies?page=' + str(page))
@@ -23,7 +23,7 @@ for page in range(32, 102):
         x = randint(2,5)
         sleep(x)
         soupCompany = bs(companyPageReq.text, 'html.parser')
-        stackElements = soupCompany.find_all("label", attrs={"data-category": "Languages & Frameworks"})
+        stackElements = soupCompany.find_all("label", attrs={"data-category": "Libraries"})
         print("Number of stacks: " + str(len(stackElements)))        
         for stackElement in stackElements:
             print(stackElement.find('p').text)        
